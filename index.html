@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stellar Password Generator: Fast, Free, & Secure</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name = "description" content = "StellarPasswordGenerator is a free tool so that anyone can easily create secure password.">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/Slogo.png" alt="" /></span>
+						<h1>Stellar Password Generator</h1>
+						<p>Free, fast, and secure passwords for you.<br />
+						Passwords are generated client-side on your device.</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Generator</a></li>
+							<li><a href="#first">Donate</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 id = "Result">Click the 'Generate' button</h2>
+										</header>
+										<p>All passwords meet current security standards:<br>
+											&bull;21 characters<br>&bull;Includes special characters<br>&bull;Not memorable</p>
+
+										<ul class="actions">
+											<li><a class="button" onClick='generate();'>Generate</a></li>
+										</ul>
+									</div>
+								</div>
+								<script>
+									var generatedPassword = "";
+									var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+{}|-=[]>?./";
+									var randomNum = 0;
+									var resultField = document.getElementById("Result");
+						
+									function generate() {
+										generatedPassword = "";
+										for (let i = 0; i < 21; i++) {
+											randomNum = Math.floor(Math.random() * characters.length)
+											  generatedPassword += characters[randomNum]; 
+										}
+										
+										resultField.innerText = generatedPassword;
+									}
+						
+								</script>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Donate</h2>
+									<h3>If this was helpful, you can say thanks by buying me a coffee via crypto :)</h3>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon major style5 fa-gem"></span>
+										<h3>Bitcoin</h3>
+										<p>3GsfscjcQ6cLuxZmgpowEW774XbQBNKY5V</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-gem"></span>
+										<h3>Ethereum</h3>
+										<p>0xBe53A87e3069372ecFC95CEa8A9a689C11e7b08d</p>
+									</li>
+								</ul>
+								<footer class="major">
+								</footer>
+							</section>
+					</div>
+
+					<footer id="footer">
+					</footer>
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
